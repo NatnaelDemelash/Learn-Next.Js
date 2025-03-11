@@ -46,7 +46,7 @@ const Tasks = () => {
                   <p className="text-sm text-gray-200">{task.dueDate}</p>
                 </div>
 
-                <section className="space-y-4">
+                <section className="space-y-4 space-x-6">
                   <span
                     className={`px-4 py-3 rounded-full ${
                       task.status === 'Completed'
@@ -58,6 +58,20 @@ const Tasks = () => {
                   >
                     {task.status}
                   </span>
+                  {/* Buttons */}
+                  <button className="bg-blue-400 tex-white px-4 py-2 rounded-lg cursor-pointer">
+                    Edit
+                  </button>
+
+                  {task.status !== 'Completed' && (
+                    <button className="bg-green-600  px-4 py-2 rounded-lg cursor-pointer">
+                      Mark as Completed
+                    </button>
+                  )}
+
+                  <button className="bg-red-400 tex-white px-4 py-2 rounded-lg cursor-pointer">
+                    Delete
+                  </button>
                 </section>
               </div>
             );
