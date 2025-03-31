@@ -51,6 +51,21 @@ const Home = () => {
           <p>{averageRating}</p>
         </div>
       </div>
+
+      <div className="mt-6">
+        <h2 className="text-white text-3xl font-semibold mb-4">Movie Lists</h2>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {movies.map((movie) => (
+            <li
+              key={movie.id}
+              className="bg-yellow-600 rounded text-white py-4 px-6"
+            >
+              <span className="text-xl">{movie.title}</span>
+              <p>{movie.description}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
